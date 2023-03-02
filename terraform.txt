@@ -39,3 +39,12 @@ resource "aws_subnet" "main" {
     Name = "demopublicsubnet"
   }
 }
+
+resource "aws_s3_bucket" "b" {
+  bucket = "my-tf-test-bucket"
+
+  tags = {
+    Name        = "gitprojectbucket"
+    Environment = "Dev"
+  }
+}
