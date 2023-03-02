@@ -21,3 +21,10 @@ resource "aws_instance" "app_server" {
     Name = "gitprojectec2"
  }
 }
+
+resource "aws_default_vpc" "default" {
+  tags = {
+    Name = "gitproject VPC"
+  }
+}
+
